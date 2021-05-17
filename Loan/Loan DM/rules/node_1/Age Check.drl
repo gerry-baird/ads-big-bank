@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Age Check</name>
+  <uuid>355d8976-f57e-4055-a690-ef16ac013ffe</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if  age is between 18 and 75 then 
+set decision to true ;
+
+else set decision to false ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
