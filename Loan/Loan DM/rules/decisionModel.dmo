@@ -19,14 +19,27 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Long" collection="false" name="age"/>
+                <input bomType="java.lang.Long" collection="false" name="income"/>
                 <output bomType="java.lang.Boolean" collection="false" name="Loan Decision"/>
-                <rule defaultRule="false" href="node_1/Age%20Check.drl" kind="BusinessRule" name="Age Check"/>
+                <rule defaultRule="false" href="node_1/Default.drl" kind="BusinessRule" name="Default"/>
+                <rule defaultRule="false" href="node_1/Validation.drl" kind="BusinessRule" name="Validation"/>
             </ruleset>
         </extensionElements>
         <variable id="node_1_ii" name="Loan Decision" typeRef="java.lang.Boolean"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
     </decision>
+    <inputData id="node_2" name="income">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="income"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="income" typeRef="java.lang.Long"/>
+    </inputData>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
